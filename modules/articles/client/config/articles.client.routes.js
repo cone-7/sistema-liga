@@ -14,15 +14,6 @@
         url: '/articles',
         template: '<ui-view/>'
       })
-      .state('articles.list', {
-        url: '',
-        templateUrl: '/modules/articles/client/views/list-articles.client.view.html',
-        controller: 'ArticlesListController',
-        controllerAs: 'vm',
-        data: {
-          pageTitle: 'Articles List'
-        }
-      })
       .state('articles.view', {
         url: '/:articleId',
         templateUrl: '/modules/articles/client/views/view-article.client.view.html',

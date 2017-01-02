@@ -1,6 +1,12 @@
-.content {
-  margin-top: 50px;
+#logo {
+    position: relative;
 }
+#logo img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
 .undecorated-link:hover {
   text-decoration: none;
 }
@@ -40,4 +46,8 @@ a:hover .header-profile-image {
 }
 .has-error .help-inline.error-text {
   display: inline;
+}
+
+nav li{
+  cursor: pointer;
 }
