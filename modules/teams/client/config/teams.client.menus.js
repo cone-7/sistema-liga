@@ -15,7 +15,7 @@
         aboutResolve: null
       },
       type: 'item',
-      roles: ['*']
+      roles: ['admin']
     });
 
     // menuService.addSubMenuItem('topbar', 'teams', {

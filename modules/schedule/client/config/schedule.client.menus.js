@@ -11,9 +11,6 @@
     menuService.addMenuItem('topbar', {
       title: 'Rol de juegos',
       state: 'schedule',
-      resolve: {
-        aboutResolve: null
-      },
       type: 'item',
       roles: ['*']
     });

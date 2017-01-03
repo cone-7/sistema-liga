@@ -1,3 +1,13 @@
+.navbar-nav > li > a:hover, .navbar-nav > li > a:focus {
+    background-color: #6DACE6;
+    color: #FFC0CB;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+background-color: #6DACE6;
+}
+
+
 #logo {
     position: relative;
 }
