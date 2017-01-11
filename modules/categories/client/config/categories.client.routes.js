@@ -29,35 +29,35 @@
         data: {
           roles: ['admin']
         },
-        // resolve: {
-        //   categorieResolve: getCategorie
-        // }
+        resolve: {
+          categorieResolve: getCategorie
+        }
       })
       .state('categories.create', {
         url: '/create',
         templateUrl: '/modules/categories/client/views/form-categories.html',
         controller: 'CategoriesController',
         controllerAs: 'vm',
-        // resolve: {
-        //   categorieResolve: newCategorie
-        // },
+        resolve: {
+          categorieResolve: newCategorie
+        },
         data: {
           roles: ['admin']
         }
       });
   }
 
-  // getCategorie.$inject = ['$stateParams', 'CategoriesService'];
+  getCategorie.$inject = ['$stateParams', 'CategoriesService'];
 
-  // function getCategorie($stateParams, CategoriesService) {
-  //   return CategoriesService.get({
-  //     categorieId: $stateParams.categorieId
-  //   }).$promise;
-  // }
+  function getCategorie($stateParams, CategoriesService) {
+    return CategoriesService.get({
+      categorieId: $stateParams.categorieId
+    }).$promise;
+  }
 
-  // newCategorie.$inject = ['CategoriesService'];
+  newCategorie.$inject = ['CategoriesService'];
 
-  // function newCategorie(CategoriesService) {
-  //   return new CategoriesService();
-  // }
+  function newCategorie(CategoriesService) {
+    return new CategoriesService();
+  }
 }());
