@@ -8,15 +8,15 @@
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(menuService) {
-    menuService.addMenuItem('topbar', {
-      title: 'Reglamento',
-      state: 'regulation',
-      resolve: {
-        aboutResolve: null
-      },
-      type: 'item',
-      roles: ['*']
-    });
+    // menuService.addMenuItem('topbar', {
+    //   title: 'Reglamento',
+    //   state: 'regulation',
+    //   resolve: {
+    //     aboutResolve: null
+    //   },
+    //   type: 'item',
+    //   roles: ['*']
+    // });
 
   }
 }());

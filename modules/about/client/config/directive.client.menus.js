@@ -36,5 +36,11 @@
       roles: ['*']
     });
 
+    menuService.addSubMenuItem('topbar', 'about', {
+      title: 'Reglamento',
+      state: 'about.regulation',
+      roles: ['*']
+    });
+
   }
 }());
