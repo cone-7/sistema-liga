@@ -5,5 +5,5 @@
   // app.registerModule('articles.admin', ['core.admin']);
   // app.registerModule('articles.admin.routes', ['core.admin.routes']);
   app.registerModule('categories.services');
-  app.registerModule('categories.routes', ['ui.router', 'core.routes', 'categories.services', 'articles.services']);
+  app.registerModule('categories.routes', ['ui.router', 'core.routes', 'categories.services']);
 }(ApplicationConfiguration));

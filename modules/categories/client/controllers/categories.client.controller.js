@@ -8,7 +8,6 @@
   CategoriesController.$inject = ['$scope', '$state', '$window', 'categorieResolve', 'Authentication', 'Notification'];
 
   function CategoriesController($scope, $state, $window, categorie, Authentication, Notification) {
-    console.log(categorie);
     var vm = this;
 
     vm.categorie = categorie;
