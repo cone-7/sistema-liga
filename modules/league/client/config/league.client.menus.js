@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('tournament')
+    .module('league')
     .run(menuConfig);
 
   menuConfig.$inject = ['menuService'];
@@ -10,7 +10,7 @@
   function menuConfig(menuService) {
     // menuService.addMenuItem('topbar', {
     //   title: 'Torneos',
-    //   state: 'tournament',
+    //   state: 'league',
     //   type: 'item',
     //   roles: ['*']
     // });

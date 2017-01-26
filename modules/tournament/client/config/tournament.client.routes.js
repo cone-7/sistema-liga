@@ -15,7 +15,8 @@
         controller: 'TournamentController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Role'
+          pageTitle: 'Role',
+          visible: true
         }
       });
   }

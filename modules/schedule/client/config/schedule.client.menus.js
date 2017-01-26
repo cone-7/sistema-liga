@@ -12,7 +12,7 @@
       title: 'Rol de juegos',
       state: 'schedule',
       type: 'item',
-      roles: ['*']
+      roles: ['visit']
     });
 
   }

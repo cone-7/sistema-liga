@@ -15,7 +15,8 @@
         controller: 'RefereesController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Referees'
+          pageTitle: 'Referees',
+          visible: true
         }
       });
   }

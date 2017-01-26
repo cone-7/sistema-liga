@@ -15,7 +15,7 @@
         aboutResolve: null
       },
       type: 'dropdown',
-      roles: ['*']
+      roles: ['visit']
     });
 
     menuService.addSubMenuItem('topbar', 'statistics', {

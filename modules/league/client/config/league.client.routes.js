@@ -2,20 +2,20 @@
   'use strict';
 
   angular
-    .module('statistics.routes')
+    .module('league.routes')
     .config(routeConfig);
 
   routeConfig.$inject = ['$stateProvider'];
 
   function routeConfig($stateProvider) {
     $stateProvider
-      .state('statistics', {
-        url: '/statistics',
-        templateUrl: '/modules/statistics/client/views/view-statistics.client.view.html',
-        controller: 'StatisticsController',
+      .state('league', {
+        url: '/league',
+        templateUrl: '/modules/league/client/views/view-league.client.view.html',
+        controller: 'LeagueController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Statistics',
+          pageTitle: 'Role',
           visible: true
         }
       });

@@ -10,7 +10,10 @@
       .state('categories', {
         abstract: true,
         url: '/categories',
-        template: '<ui-view/>'
+        template: '<ui-view/>',
+        data: {
+          visible: true
+        }
       })
       .state('categories.list', {
         url: '',

@@ -15,7 +15,8 @@
         controller: 'PlayersController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Players'
+          pageTitle: 'Players',
+          visible: true
         }
       });
   }

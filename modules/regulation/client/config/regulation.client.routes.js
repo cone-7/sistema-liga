@@ -15,7 +15,8 @@
         controller: 'RegulationController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Regulation'
+          pageTitle: 'Regulation',
+          visible: true
         }
       });
   }

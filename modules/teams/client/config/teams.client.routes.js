@@ -15,7 +15,8 @@
         controller: 'TeamsController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Teams'
+          pageTitle: 'Teams',
+          visible: true
         }
       });
   }
