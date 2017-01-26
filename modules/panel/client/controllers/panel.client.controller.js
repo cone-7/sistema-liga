@@ -20,7 +20,6 @@
       if (states[state].data)
         if (states[state].data.visible && states[state].name.indexOf('.') === -1 && states[state].name!=='settings')
           vm.stateToShow.push(states[state].name)
-          //console.log(states[state].name.indexOf('.'));
 
 
   }

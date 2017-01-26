@@ -18,17 +18,5 @@
       roles: ['visit']
     });
 
-    // menuService.addSubMenuItem('topbar', 'stadiums', {
-    //   title: 'Tabla General',
-    //   state: 'stadiums.table',
-    //   roles: ['*']
-    // });
-
-    // menuService.addSubMenuItem('topbar', 'stadiums', {
-    //   title: 'Sancionados',
-    //   state: 'stadiums.sanctioned',
-    //   roles: ['*']
-    // });
-
   }
 }());

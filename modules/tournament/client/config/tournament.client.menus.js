@@ -8,12 +8,6 @@
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(menuService) {
-    // menuService.addMenuItem('topbar', {
-    //   title: 'Torneos',
-    //   state: 'tournament',
-    //   type: 'item',
-    //   roles: ['*']
-    // });
 
   }
 }());

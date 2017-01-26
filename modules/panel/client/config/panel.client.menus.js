@@ -18,17 +18,5 @@
       roles: ['admin']
     });
 
-    // menuService.addSubMenuItem('topbar', 'panel', {
-    //   title: 'Tabla General',
-    //   state: 'panel.table',
-    //   roles: ['*']
-    // });
-
-    // menuService.addSubMenuItem('topbar', 'panel', {
-    //   title: 'Sancionados',
-    //   state: 'panel.sanctioned',
-    //   roles: ['*']
-    // });
-
   }
 }());
