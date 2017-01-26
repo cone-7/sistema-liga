@@ -28,7 +28,6 @@
     function addMenu(menuId, options) {
       options = options || {};
 
-      // Create the new menu
       service.menus[menuId] = {
         roles: options.roles || service.defaultRoles,
         items: options.items || [],
@@ -109,6 +108,8 @@
     function init() {
       // A private function for rendering decision
       shouldRender = function (user) {
+        if (!user)
+          user = { roles: ['visit'] };
         if (this.roles.indexOf('*') !== -1) {
           return true;
         } else {

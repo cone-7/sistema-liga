@@ -18,7 +18,8 @@
         controller: 'SettingsController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin']
+          roles: ['user', 'admin'],
+          visible: true
         }
       })
       .state('settings.profile', {
