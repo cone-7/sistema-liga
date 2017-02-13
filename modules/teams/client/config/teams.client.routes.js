@@ -10,7 +10,10 @@
       .state('teams', {
         abstract: true,
         url: '/teams',
-        template: '<ui-view/>'
+        template: '<ui-view/>',
+        data: {
+          visible: true
+        }
       })
       .state('teams.list', {
         url: '',
@@ -18,7 +21,8 @@
         controller: 'TeamsListController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Teams'
+          pageTitle: 'Teams',
+          visible: true
         }
       })
       .state('teams.edit', {

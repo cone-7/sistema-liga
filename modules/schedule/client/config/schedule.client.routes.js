@@ -15,7 +15,8 @@
         controller: 'ScheduleController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Role'
+          pageTitle: 'Role',
+          visible: true
         }
       });
   }

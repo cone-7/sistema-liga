@@ -15,16 +15,9 @@
         controller: 'RegulationController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Regulation'
+          pageTitle: 'Regulation',
+          visible: true
         }
       });
   }
-
-  // getArticle.$inject = ['$stateParams', 'DirectiveService'];
-
-  // function getArticle($stateParams, ArticlesService) {
-  //   return ArticlesService.get({
-  //     articleId: $stateParams.articleId
-  //   }).$promise;
-  // }
 }());

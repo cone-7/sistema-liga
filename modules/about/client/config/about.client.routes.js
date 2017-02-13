@@ -15,7 +15,8 @@
         controller: 'AboutController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'About'
+          pageTitle: 'About',
+          visible: true
         }
       });
   }

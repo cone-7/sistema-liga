@@ -15,16 +15,9 @@
         controller: 'RefereesController',
         controllerAs: 'vm',
         data: {
-          pageTitle: 'Referees'
+          pageTitle: 'Referees',
+          visible: true
         }
       });
   }
-
-  // getArticle.$inject = ['$stateParams', 'DirectiveService'];
-
-  // function getArticle($stateParams, ArticlesService) {
-  //   return ArticlesService.get({
-  //     articleId: $stateParams.articleId
-  //   }).$promise;
-  // }
 }());
