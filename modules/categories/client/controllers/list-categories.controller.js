@@ -5,8 +5,11 @@
     .module('categories')
     .controller('CategoriesListController', CategoriesListController);
 
-  function CategoriesListController() {
+  CategoriesListController.$inject = ['CategoriesService'];
+
+  function CategoriesListController(CategoriesService) {
     var vm = this;
 
+    vm.categories = CategoriesService.query();
   }
 }());
