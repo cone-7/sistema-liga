@@ -45,7 +45,9 @@ controller('CarouselDemoCtrl', function ($scope) {
 
   // http://stackoverflow.com/questions/962802#962890
   function shuffle(array) {
-    var tmp, current, top = array.length;
+    var tmp;
+    var current;
+    var top = array.length;
 
     if (top) {
       while (--top) {

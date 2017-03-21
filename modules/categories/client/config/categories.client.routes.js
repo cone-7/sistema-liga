@@ -31,6 +31,9 @@
         controllerAs: 'vm',
         data: {
           roles: ['admin']
+        },
+        resolve: {
+          categorieResolve: getCategorie
         }
       })
       .state('categories.create', {
@@ -38,9 +41,26 @@
         templateUrl: '/modules/categories/client/views/form-categories.html',
         controller: 'CategoriesController',
         controllerAs: 'vm',
+        resolve: {
+          categorieResolve: newCategorie
+        },
         data: {
           roles: ['admin']
         }
       });
+  }
+
+  getCategorie.$inject = ['$stateParams', 'CategoriesService'];
+
+  function getCategorie($stateParams, CategoriesService) {
+    return CategoriesService.get({
+      categorieId: $stateParams.categorieId
+    }).$promise;
+  }
+
+  newCategorie.$inject = ['CategoriesService'];
+
+  function newCategorie(CategoriesService) {
+    return new CategoriesService();
   }
 }());

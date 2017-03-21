@@ -1,0 +1,30 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.team._id ? 'Editar Equipos' : 'Nuevo Equipo'}}</h1>
+  </div>
+  <div class="pull-right">
+    <a ng-show="vm.team._id" class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.teamForm" class="form-horizontal" ng-submit="vm.save(vm.form.teamForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Nombre</label>
+          <input name="name" type="text" ng-model="vm.team.name" id="name" class="form-control" placeholder="Nombre" required autofocus>
+          <div ng-messages="vm.form.teamForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Team name is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label" for="content">Categoria</label>
+          <input type="text" ng-model="vm.team.categorie" uib-typeahead="categorie as categorie.title for categorie in vm.categories | filter:$viewValue | limitTo:8" class="form-control">
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.team._id ? 'Update' : 'Create'}}</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

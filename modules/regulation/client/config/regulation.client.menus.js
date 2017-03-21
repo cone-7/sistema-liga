@@ -8,6 +8,6 @@
   menuConfig.$inject = ['menuService'];
 
   function menuConfig(menuService) {
-    
+
   }
 }());

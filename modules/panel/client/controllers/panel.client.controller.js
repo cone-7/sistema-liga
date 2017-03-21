@@ -13,13 +13,13 @@
     vm.panel = panel;
     vm.authentication = Authentication;
 
-    var state = "";
+    var state = '';
     var states = $state.get();
     vm.stateToShow = [];
-    for(state in states)
+    for (state in states)
       if (states[state].data)
-        if (states[state].data.visible && states[state].name.indexOf('.') === -1 && states[state].name!=='settings')
-          vm.stateToShow.push(states[state].name)
+        if (states[state].data.visible && states[state].name.indexOf('.') === -1 && states[state].name !== 'settings')
+          vm.stateToShow.push(states[state].name);
 
 
   }

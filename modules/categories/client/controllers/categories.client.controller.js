@@ -5,7 +5,7 @@
     .module('categories')
     .controller('CategoriesController', CategoriesController);
 
-  CategoriesController.$inject = ['$scope', '$state', '$window', 'Authentication', 'Notification'];
+  CategoriesController.$inject = ['$scope', '$state', '$window', 'categorieResolve', 'Authentication', 'Notification'];
 
   function CategoriesController($scope, $state, $window, categorie, Authentication, Notification) {
     var vm = this;
