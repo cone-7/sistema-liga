@@ -6,6 +6,7 @@
 var path = require('path'),
   mongoose = require('mongoose'),
   Team = mongoose.model('Team'),
+  Categorie = mongoose.model('Categorie'),
   errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'));
 
 /**
@@ -31,8 +32,18 @@ exports.create = function (req, res) {
 exports.read = function (req, res) {
   // convert mongoose document to JSON
   var team = req.team ? req.team.toJSON() : {};
-
-  res.json(team);
+  var cat = null;
+  Categorie.findOne({ _id: team.categorie }, function(err, objCategorie) {
+    if (err) {
+      console.log('errr', err);
+    } else {
+      console.log('aaaaaaa');
+      console.log(objCategorie);
+      team.categorie = objCategorie;
+      res.json(team);
+    }
+  });
+  //res.json(team);
 };
 
 /**

@@ -16,6 +16,7 @@
     vm.form = {};
     vm.remove = remove;
     vm.save = save;
+    vm.formatLabel = formatLabel;
 
     // Remove existing Categories
     function remove() {
@@ -27,6 +28,18 @@
       }
     }
 
+    function formatLabel($model) {
+      if(vm.categories.length===0 && vm.team.categorie)
+        return vm.team.categorie.title;
+      else {
+        for (var i=0; i< vm.categories.length; i++) {
+          if ($model === vm.categories[i]._id) {
+            return vm.categories[i].title;
+          }
+        }
+      }
+    }
+
     // Save Team
     function save(isValid) {
       if (!isValid) {
@@ -35,6 +48,9 @@
       }
 
       // Create a new article, or update the current instance
+      console.log('aaaaaaaa');
+      console.log(vm.team.categorie);
+      console.log(vm.team.name);
       console.log(vm.team);
       vm.team.createOrUpdate()
         .then(successCallback)

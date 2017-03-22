@@ -26,7 +26,6 @@
     return Team;
 
     function createOrUpdate(team) {
-      console.log(team);
       if (team._id) {
         return team.$update(onSuccess, onError);
       } else {
