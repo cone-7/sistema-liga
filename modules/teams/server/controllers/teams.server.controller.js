@@ -43,7 +43,7 @@ exports.read = function (req, res) {
       res.json(team);
     }
   });
-  //res.json(team);
+  // res.json(team);
 };
 
 /**
@@ -53,7 +53,7 @@ exports.update = function (req, res) {
   var team = req.team;
 
   team.name = req.body.name;
-  team.content = req.body.content;
+  team.categorie = req.body.categorie;
 
   team.save(function (err) {
     if (err) {

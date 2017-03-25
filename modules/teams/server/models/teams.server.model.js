@@ -26,7 +26,7 @@ var TeamSchema = new Schema({
   },
   categorie: {
     type: Schema.ObjectId,
-    ref: 'CategorieSchema'
+    ref: 'Categorie'
   }
 });
 

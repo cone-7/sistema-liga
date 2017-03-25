@@ -20,10 +20,10 @@
 
     // Remove existing Categories
     function remove() {
-      if ($window.confirm('Are you sure you want to delete?')) {
+      if ($window.confirm('¿Seguro de eliminar?')) {
         vm.team.$remove(function() {
           $state.go('teams.list');
-          Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Categoria borrada!' });
+          Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Equipo borrada!' });
         });
       }
     }
@@ -47,18 +47,13 @@
         return false;
       }
 
-      // Create a new article, or update the current instance
-      console.log('aaaaaaaa');
-      console.log(vm.team.categorie);
-      console.log(vm.team.name);
-      console.log(vm.team);
       vm.team.createOrUpdate()
         .then(successCallback)
         .catch(errorCallback);
 
       function successCallback(res) {
-        $state.go('teams.list'); // should we send the User to the list or the updated Article's view?
-        Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Categoria creada!' });
+        $state.go('teams.list'); 
+        Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Acción exitosa!' });
       }
 
       function errorCallback(res) {
