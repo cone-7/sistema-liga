@@ -37,8 +37,6 @@ exports.read = function (req, res) {
     if (err) {
       console.log('errr', err);
     } else {
-      console.log('aaaaaaa');
-      console.log(objCategorie);
       team.categorie = objCategorie;
       res.json(team);
     }
