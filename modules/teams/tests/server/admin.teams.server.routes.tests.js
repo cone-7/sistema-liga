@@ -58,13 +58,13 @@ describe('Team Admin CRUD tests', function () {
       content: 'Team Content',
       user: user.id
     });
-    categorie.save(function(){
+    categorie.save(function() {
       done();
     });
 
     team = new Team({
       name: 'Test team',
-      categorie : categorie._id,
+      categorie: categorie._id,
       user: user.id
     });
 
@@ -189,6 +189,36 @@ describe('Team Admin CRUD tests', function () {
           .end(function (teamSaveErr, teamSaveRes) {
             // Set message assertion
             (teamSaveRes.body.message).should.match('Name cannot be blank');
+
+            // Handle team save error
+            done(teamSaveErr);
+          });
+      });
+  });
+
+  it('should not be able to save an team if no categorie is provided', function (done) {
+    // Invalidate name field
+    team.categorie = '';
+
+    agent.post('/api/auth/signin')
+      .send(credentials)
+      .expect(200)
+      .end(function (signinErr, signinRes) {
+        // Handle signin error
+        if (signinErr) {
+          return done(signinErr);
+        }
+
+        // Get the userId
+        var userId = user.id;
+
+        // Save a new team
+        agent.post('/api/teams')
+          .send(team)
+          .expect(422)
+          .end(function (teamSaveErr, teamSaveRes) {
+            // Set message assertion
+            (teamSaveRes.body.message).should.match('Categorie cannot be blank');
 
             // Handle team save error
             done(teamSaveErr);

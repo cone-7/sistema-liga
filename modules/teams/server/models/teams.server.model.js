@@ -26,7 +26,8 @@ var TeamSchema = new Schema({
   },
   categorie: {
     type: Schema.ObjectId,
-    ref: 'Categorie'
+    ref: 'Categorie',
+    required: 'Categorie cannot be blank'
   }
 });
 

@@ -42,11 +42,11 @@ describe('Team Model Unit Tests:', function () {
 
     team = new Team({
       name: 'Test team',
-      categorie : categorie._id,
+      categorie: categorie._id,
       user: user
     });
 
-    team.save(function(){
+    team.save(function() {
       done();
     });
   });

@@ -58,13 +58,13 @@ describe('Team CRUD tests', function () {
       content: 'Team Content',
       user: user.id
     });
-    categorie.save(function(){
+    categorie.save(function() {
       done();
     });
 
     team = new Team({
       name: 'Test team',
-      categorie : categorie.id,
+      categorie: categorie.id
     });
 
   });

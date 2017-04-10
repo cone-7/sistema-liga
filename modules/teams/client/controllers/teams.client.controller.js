@@ -23,16 +23,16 @@
       if ($window.confirm('¿Seguro de eliminar?')) {
         vm.team.$remove(function() {
           $state.go('teams.list');
-          Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Equipo borrada!' });
+          Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Equipo borrado!' });
         });
       }
     }
 
     function formatLabel($model) {
-      if(vm.categories.length===0 && vm.team.categorie)
+      if (vm.categories.length === 0 && vm.team.categorie)
         return vm.team.categorie.title;
       else {
-        for (var i=0; i< vm.categories.length; i++) {
+        for (var i = 0; i < vm.categories.length; i++) {
           if ($model === vm.categories[i]._id) {
             return vm.categories[i].title;
           }
@@ -52,7 +52,7 @@
         .catch(errorCallback);
 
       function successCallback(res) {
-        $state.go('teams.list'); 
+        $state.go('teams.list');
         Notification.success({ message: '<i class="glyphicon glyphicon-ok"></i> Acción exitosa!' });
       }
 
