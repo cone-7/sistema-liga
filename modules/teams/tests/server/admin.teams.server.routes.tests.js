@@ -187,6 +187,7 @@ describe('Team Admin CRUD tests', function () {
           .send(team)
           .expect(422)
           .end(function (teamSaveErr, teamSaveRes) {
+            console.log(teamSaveRes.body);
             // Set message assertion
             (teamSaveRes.body.message).should.match('Name cannot be blank');
 
@@ -197,8 +198,7 @@ describe('Team Admin CRUD tests', function () {
   });
 
   it('should not be able to save an team if no categorie is provided', function (done) {
-    // Invalidate name field
-    team.categorie = '';
+    // Invalidate categorie field
 
     agent.post('/api/auth/signin')
       .send(credentials)
@@ -213,6 +213,7 @@ describe('Team Admin CRUD tests', function () {
         var userId = user.id;
 
         // Save a new team
+        team.categorie = null;
         agent.post('/api/teams')
           .send(team)
           .expect(422)
